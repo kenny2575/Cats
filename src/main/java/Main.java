@@ -32,7 +32,7 @@ public class Main {
         CloseableHttpResponse response = httpClient.execute(request);
         Arrays.stream(response.getAllHeaders());
 
-        List<Cats> catsList = mapper.readValue(response.getEntity().getContent(), new TypeReference<List<Cats>>() {});
+        List<Cats> catsList = mapper.readValue(response.getEntity().getContent(), new TypeReference<>() {});
         catsList.stream().filter(value -> value.getUpvote() != null && value.getUpvote() > 0)
                 .forEach(System.out::println);
 

@@ -9,12 +9,12 @@ public class Cats {
     private final Integer upvote;
 
     public Cats(@JsonProperty("id") String id, @JsonProperty("text") String text, @JsonProperty("type") String type,
-                @JsonProperty("user") String user, @JsonProperty("upvotes") Integer upvotes) {
+                @JsonProperty("user") String user, @JsonProperty("upvotes") Integer upvote) {
         this.id = id;
         this.text = text;
         this.type = type;
         this.user = user;
-        this.upvote = upvotes;
+        this.upvote = upvote;
     }
 
     public Integer getUpvote() {
